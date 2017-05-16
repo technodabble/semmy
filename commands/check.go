@@ -9,7 +9,21 @@ import (
 	"github.com/urfave/cli"
 )
 
-func Check(c *cli.Context) error {
+func Check() cli.Command {
+  return cli.Command {
+    Name: "check",
+    Aliases: []string{"c"},
+    ArgsUsage: "range [version]",
+    Usage: "Checks if the version is in the given range",
+    Description: `Checks if the version is in the given range.
+      range - As described here: https://github.com/blang/semver#ranges
+      version - The version string. If omitted, it will be read from STDIN.
+      returns zero if true and non-zero otherwise.`,
+    Action: check,
+  }
+}
+
+func check(c *cli.Context) error {
   var version string
   if c.NArg() > 2 || c.NArg() < 1 {
     cli.ShowAppHelp(c)

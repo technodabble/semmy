@@ -16,10 +16,11 @@ func Create() *Semmy {
 		a: cli.NewApp(),
 	}
 	sem.a.Usage = "A Command-Line Semantic Versioning Toolbox"
-  sem.a.UsageText = "semmy range [version]"
-  sem.a.ArgsUsage = "range has a specific format see: https://github.com/blang/semver#ranges"
+  sem.a.UsageText = "semmy [global-options] command [options] [version]"
 	sem.a.Version = "0.1.0"
-	sem.a.Action = commands.Check
+  sem.a.Commands = []cli.Command{
+    commands.Check(),
+  }
 	return sem
 }
 
