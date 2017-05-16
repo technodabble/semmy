@@ -1,0 +1,23 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "WQ8Hw5UXlC6I2DWMDYSOdl8sgcU=",
+			"path": "github.com/blang/semver",
+			"revision": "b38d23b8782a487059e8fc8773e9a5b228a77cb6",
+			"revisionTime": "2017-01-30T17:05:46Z",
+			"version": "v3",
+			"versionExact": "v3.5.0"
+		},
+		{
+			"checksumSHA1": "LMu1NsthSqcXfKu0m6YGPAmwBcY=",
+			"path": "github.com/urfave/cli",
+			"revision": "0bdeddeeb0f650497d603c4ad7b20cfe685682f6",
+			"revisionTime": "2016-11-22T04:36:10Z",
+			"version": "v1",
+			"versionExact": "v1.19.1"
+		}
+	],
+	"rootPath": "github.com/technodabble/semmy"
+}
