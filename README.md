@@ -12,7 +12,7 @@ go install github.com/technodabble/semmy
 
 To run it:
 ```
-semmy range [version]
+semmy check range [version]
 ```
 `range` is as [documented here](https://github.com/blang/semver#ranges).
 
@@ -21,13 +21,13 @@ be read from the first line of `STDIN`
 
 ### Examples
 ```
-$> semmy '>1.0.10 <3.0.4' 2.4.5-alpha.13+10211979
+$> semmy check '>1.0.10 <3.0.4' 2.4.5-alpha.13+10211979
 2.4.5-alpha.13+10211979 is in the range: >1.0.10 <3.0.4
 
 $> echo $?
 0
 
-$> echo 3.5.6 | semmy '>1.0.10 <3.0.4'
+$> echo 3.5.6 | semmy check '>1.0.10 <3.0.4'
 3.5.6 is NOT in the range: >1.0.10 <3.0.4
 
 $> echo $?
