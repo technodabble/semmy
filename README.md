@@ -1,12 +1,24 @@
 # semmy: Semantic Versions from the Command Line
 
-To get the project into your go workspace:
+## Get the software
+
+Here you have two options. If you just want to run it:
 ```
-go get github.com/technodabble/semmy
+$> go get github.com/technodabble/semmy
+```
+
+But, if you want to develop it, clone it from github:
+```
+$> cd $GOPATH
+$> mkdir -p src/github.com/technodabble
+$> cd src/github.com/technodabble
+$> git clone git@github.com:technodabble/semmy.git
 ```
 
 To install it:
 ```
+go get -u github.com/kardianos/govendor
+govendor sync github.com/technodabble/semmy
 go install github.com/technodabble/semmy
 ```
 
